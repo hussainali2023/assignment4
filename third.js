@@ -7,8 +7,14 @@
 // এখন সে যদি বিভিন্ন লিটারের ডিজেল,পেট্রোল,অকটেনের অর্ডার দেয় তাহলে টোটাল কত টাকা খরচ হবে হলো সেই সংখ্যা রিটার্ন করতে হবে।
 
 function oilPrice(diselQuantity, petrolQuantity, oktenQuantity){
-    if(typeof diselQuantity !== 'number' && petrolQuantity !== 'number' && oktenQuantity !=='number'){
-        return "please enter a valid input";
+    if(typeof diselQuantity !== 'number'){
+        return 'please enter a valid input'; //eror messege
+    }
+    else if(typeof petrolQuantity !== 'number'){
+        return 'please enter a valid input'
+    }
+    else if(typeof oktenQuantity !== 'number'){
+        return 'please enter a valid input'
     }
     const diselPrice = 114;
     const allDiselPrice = diselPrice * diselQuantity;
@@ -19,5 +25,5 @@ function oilPrice(diselQuantity, petrolQuantity, oktenQuantity){
     const totalPrice = allDiselPrice + allPetrolPrice + allOktanePrice;
     return totalPrice;
 }
-const oilQuantity = oilPrice(6, 'hh', 7);
+const oilQuantity = oilPrice(11,10,21);
 console.log(oilQuantity);

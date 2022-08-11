@@ -11,10 +11,13 @@
 //  যদি ২৩৫ জন মানুষ পিকনিকে যায় তাহলে আমাদের বাস লাগবে ৪ টি ও মাইক্রোবাস লাগবে ৩ টি এবং বাকি মানুষ পাবলিক বাসে যাবে। এই কয়জন মানুষগুলোর জন্য পাবলিক বাসের ভাড়া মোট কত হবে সেটি রিটার্ন করতে হবে।
 
 function publicBusFare(people){
+   if(typeof people !== 'number'){
+      return "please enter a valid input"; //error messege
+    } 
 const privateBus = people % 50;
 const microBus = privateBus % 11;
 const publicBusVara = microBus * 250;
 return publicBusVara;
 }
-const totalPeople = publicBusFare(365);
+const totalPeople = publicBusFare(10);
 console.log(totalPeople);
